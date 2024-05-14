@@ -78,6 +78,11 @@ public:
         dbC.setBD_State(false);
         return 1;
     }
+
+    int Connect () {
+        dbC.setBD_State(true);
+        return 1;
+    }
     
     bool writeDb (string str){
         if ( dbC.setRecord(str)) {
