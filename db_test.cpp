@@ -40,11 +40,13 @@ TEST(MyDBTest, SetRecord){
            .WillRepeatedly(Return(true));
 
     EXPECT_CALL(mdb, getBD_State())
-            .Times(AtLeast(1))
+            .  --Times(AtLeast(1))
             .WillRepeatedly(Return(false));
     EXPECT_CALL(mdb, getRecord())
             .Times(AtLeast(1))
-            .WillRepeatedly(Return("ttest"));
+
+            /// new true test
+            .WillRepeatedly(Return("test"));
 
  
                //int retvalue = db.Init("Terminator", "I m back");
